@@ -162,7 +162,6 @@ getResultMessage = (numberPlayerWon, numberComputerWon) => {
 }
 
 
-
 game = (selectedButton) => {
     const playerSelection = selectedButton.getAttribute('id')
 
