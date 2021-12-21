@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: #F1F0F0;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.gameTitle, .scoreboard {
+    font-family: 'Paytone One', serif;
+}
+
+
+.roundMessage, .whoWon{
+    font-family: 'Abhaya Libre', serif;
+}
+
+
+button {
+    background: #FAFAFA;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 50px;
+    margin: 30px 35px;
+}
+
+button > svg {
+    width: 62.5%;
+}
+
+button:hover {
+    transition: 300ms;
+    box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+button:active {
+    background: #cecdcd;
+}
+
+button:not(:hover) { 
+    transition: 300ms;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25); 
+}
+
+
+.container {
+    width: 85vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.scoreboard {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameTitle {
+    font-size: 4vw;
+}
+
+.scoreboard {
+    font-size: 3vw;
+}
+
+.roundMessage {
+    font-size: 3vw;
+}
+
+
+.resultMessage {
+    width: 66vw;
+    height: 33vw;
+    background-color: #FAFAFA;
+    position: absolute;
+    border-radius: 50px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    display: none;
+}
+
+
+.whoWon {
+    font-size: clamp(3.45vw, 3.5vw, 100px);
+}
+
+.finalScoreBoard {
+    font: bold 2.8vw/30px 'Manrope', sans-serif;
+}
+
+.questionToPlayer {
+    font: 1.8vw/30px 'Manrope', sans-serif;
+}
+
+.buttonToReplay > button {
+    width: 13.2vw;
+    height: 6vw;
+    border-radius: 30px;
+    background-color: #1779A0;
+    color: #FAFAFA;
+    font:  600 1.8vw/30px 'Manrope', sans-serif;
+    transition: 300ms;
+}
+
+.buttonToReplay > button:hover {
+    background-color: #1C95C6;
+}
+
+
+.animationClass {
+    animation-name: shakeIt;
+    animation-duration: 500ms;
+}
+
+
+@keyframes shakeIt {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
